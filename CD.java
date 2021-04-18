@@ -17,7 +17,7 @@ public class CD implements DigitalAlbum {
         songs.add(song3);
         songs.add(song4);
         songs.add(song5);
-        currentindex = 0;
+        currentindex = songs.size();
     }
 
     public String playFromBeginning() {
@@ -38,19 +38,19 @@ public class CD implements DigitalAlbum {
     }
 
     public String nextSong() {
-        if (currentindex < songs.size() - 1) {
+        /*if (currentindex < songs.size() - 1) {
             return "Playing: " + (currentindex + 1) + ": " + songs.get(currentindex++);
         }
         int temp = currentindex;
         currentindex = 0;
-        return "Playing: " + (temp + 1) + ": " + songs.get(temp);
+        return "Playing: " + (temp + 1) + ": " + songs.get(temp);*/
 
-        /*if (currentindex < songs.size() - 1) {
+        if (currentindex < songs.size() - 1) {
             currentindex++;
         } else {
             currentindex = 0;
         }
-        return "Playing: " + (currentindex + 1) + ": " + songs.get(currentindex);*/ // Written as described
+        return "Playing: " + (currentindex + 1) + ": " + songs.get(currentindex); // Written as described
     }
 
     public String stop() {
