@@ -22,7 +22,7 @@ public class Cassette implements AnalogAlbum {
 
     public String play() {
         if (currentindex < songs.size()) {
-            return "Playing song " + (currentindex + 1) + ":" + songs.get(currentindex);
+            return "Playing song " + (currentindex + 1) + ": " + songs.get(currentindex++);
         }
         return "At the end of the cassett you need to rewind";
     }
@@ -31,7 +31,6 @@ public class Cassette implements AnalogAlbum {
         return (currentindex > 0) ? "Rewinding to song " + (currentindex--) : "Fully Re-Wound";
     }
 
-    @Override
     public String ffwd() {
         if (currentindex == (songs.size() - 1)) {
             return "At the end of the cassett you need to rewind";
@@ -44,12 +43,10 @@ public class Cassette implements AnalogAlbum {
 
     }
 
-    @Override
     public String pause() {
         return "Pausing " + songs.get(currentindex);
     }
 
-    @Override
     public String stopEject() {
         return "Stopping cassett and ejecting";
     }

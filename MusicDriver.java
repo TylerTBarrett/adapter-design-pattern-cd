@@ -1,7 +1,7 @@
 public class MusicDriver {
 
 	public void RunMusicDriver() {
-		AnalogAlbum beatlesTape = new Cassett("A hard Day's Night", "I should Have Known Better", "If I Fell", "I'm Happy Just To Dance With You", "And I Love Her");
+		AnalogAlbum beatlesTape = new Cassette("A hard Day's Night", "I should Have Known Better", "If I Fell", "I'm Happy Just To Dance With You", "And I Love Her");
 		DigitalAlbum oasisCD = new CD("Hello", "Hey Now!", "She's Electric", "Wonderwall", "Champagne Supernova");
 		AnalogAlbum oasisTape = new AnalogAdapter(oasisCD);
 		
