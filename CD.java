@@ -10,6 +10,14 @@ public class CD implements DigitalAlbum {
     private ArrayList<String> songs;
     private int currentindex;
 
+    /**
+     * Constructs a new CD based on the 5 inputted songs
+     * @param song1 String indicating song at index 0
+     * @param song2 String indicating song at index 1
+     * @param song3 String indicating song at index 2
+     * @param song4 String indicating song at index 3
+     * @param song5 String indicating song at index 4
+     */
     public CD(String song1, String song2, String song3, String song4, String song5) {
         songs = new ArrayList<>();
         songs.add(song1);
@@ -34,7 +42,7 @@ public class CD implements DigitalAlbum {
     }
 
     public String prevSong() {
-        return "Skipping back and playing: " + ((currentindex > 0) ? songs.get(currentindex--) : songs.get(currentindex));
+        return "Skipping back and playing: " + ((currentindex > 0) ? songs.get(currentindex-- - 1) : songs.get(currentindex));
     }
 
     public String nextSong() {
@@ -43,7 +51,7 @@ public class CD implements DigitalAlbum {
         }
         int temp = currentindex;
         currentindex = 0;
-        return "Playing: " + (temp + 1) + ": " + songs.get(temp);*/
+        return "Playing: " + (temp + 1) + ": " + songs.get(temp);*/  //  Previous implementationg, deprecated
 
         if (currentindex < songs.size() - 1) {
             currentindex++;
@@ -58,7 +66,6 @@ public class CD implements DigitalAlbum {
         return "Stopping CD and ejecting";
     }
 
-    @Override
     public String pause() {
         return "Pausing song " + (currentindex + 1);
     }

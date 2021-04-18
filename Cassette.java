@@ -10,6 +10,14 @@ public class Cassette implements AnalogAlbum {
     private ArrayList<String> songs;
     private int currentindex;
 
+    /**
+     * Constructs a new Cassette based on the five inputted Strings
+     * @param song1 String indicating song at index 0
+     * @param song2 String indicating song at index 1
+     * @param song3 String indicating song at index 2
+     * @param song4 String indicating song at index 3
+     * @param song5 String indicating song at index 4
+     */
     public Cassette(String song1, String song2, String song3, String song4, String song5) {
         songs = new ArrayList<>();
         songs.add(song1);
